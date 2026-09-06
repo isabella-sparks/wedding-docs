@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents — Sparks Wedding 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown:        #8b5e3c;
+    --brown-dark:   #5e3f28;
+    --tan:          #d4a574;
+    --tan-soft:     #e8d5b7;
+    --cream:        #faf6f0;
+    --cream-deep:   #f3ebdd;
+    --ink:          #2c2620;
+    --ink-soft:     #5b5048;
+    --border:       #e0d3bf;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+    flex: 1;
+    width: 100%;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 76px 32px 56px;
+    background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brown);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 6vw, 56px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brown);
+  }
+  .hero .sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .divider {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--brown);
+    margin: 28px auto;
+    border: none;
+  }
+
+  /* ── DOCUMENT LIST ────────────────────────────────────────────────── */
+  .docs {
+    padding: 56px 0 64px;
+  }
+
+  .doc-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+  }
+
+  .doc-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border: 1.5px solid var(--brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+  }
+  .doc-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--brown);
+  }
+
+  .doc-body { flex: 1; padding-top: 2px; }
+
+  .doc-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--brown-dark);
+    margin-bottom: 6px;
+  }
+
+  .doc-body p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+  }
+  .doc-link:hover { color: var(--brown-dark); }
+  .doc-link svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+  }
+
+  .empty-note {
+    text-align: center;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    padding: 40px 0;
+  }
+
+  /* ── CLOSING ─────────────────────────────────────────────────────── */
+  .closing {
+    text-align: center;
+    padding: 56px 32px 72px;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--border);
+  }
+  .closing .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown);
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+  .closing p {
+    max-width: 460px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+  .closing a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+  }
+  .closing a:hover { color: var(--brown-dark); }
+  .closing .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--brown);
+    margin-top: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 56px 20px 44px; }
+    .doc-card { flex-direction: column; gap: 14px; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="ornament">SPARKS WEDDING · MAY 2028</div>
+  <h1>Wedding <em>Documents</em></h1>
+  <hr class="divider">
+  <p class="sub">Reference guides for our guests — travel, logistics, and anything else worth having in writing before the trip.</p>
+</header>
+
+<div class="wrap">
+  <section class="docs">
+
+    <!-- ── DOCUMENT ENTRY ──────────────────────────────────────────── -->
+    <!-- To add another document, copy this whole <div class="doc-card">
+         block and edit the title, description, and href. -->
+    <div class="doc-card">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <path d="M14 2v6h6"></path>
+        </svg>
+      </div>
+      <div class="doc-body">
+        <h2>Medical Coverage Guide</h2>
+        <p>For our American guests on Medicare: what Original Medicare and Medigap do and don't cover in Portugal, and how to make sure you're protected for the trip.</p>
+        <a class="doc-link" href="documents/medical-coverage-guide.pdf" target="_blank" rel="noopener">
+          View PDF
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Uncomment and use this in place of the docs list if none exist yet:
+    <p class="empty-note">More documents will be posted here as the trip gets closer.</p>
+    -->
+
+  </section>
+</div>
+
+<!-- ─── CLOSING ─────────────────────────────────────────────────────── -->
+<footer class="closing">
+  <div class="ornament">·  ·  ·</div>
+  <p>If anything here is unclear or you can't find what you're looking for, just reach out — we're happy to help.</p>
+  <p style="margin-top: 8px;"><a href="mailto:travel@sparkswedding.co">travel@sparkswedding.co</a></p>
+  <div class="signature">— Isabella &amp; Julie</div>
+</footer>
+
+</body>
+</html>
