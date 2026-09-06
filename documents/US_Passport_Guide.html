@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Passport Guide — Sparks Wedding 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown:        #8b5e3c;
+    --brown-dark:   #5e3f28;
+    --tan:          #d4a574;
+    --tan-soft:     #e8d5b7;
+    --cream:        #faf6f0;
+    --cream-deep:   #f3ebdd;
+    --ink:          #2c2620;
+    --ink-soft:     #5b5048;
+    --border:       #e0d3bf;
+    --green:        #6b8e5a;
+    --rose:         #b06a5b;
+    --gold:         #b8924a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 80px 32px 60px;
+    background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brown);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brown);
+  }
+  .hero .sub {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .divider {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--brown);
+    margin: 32px auto;
+    border: none;
+  }
+
+  /* ── SECTIONS ─────────────────────────────────────────────────────── */
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    font-style: italic;
+    color: var(--tan);
+    margin-right: 12px;
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--brown-dark);
+    margin: 28px 0 12px;
+  }
+  .section-intro {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 24px;
+    font-size: 17px;
+  }
+
+  p { margin-bottom: 16px; }
+  p strong { color: var(--brown-dark); font-weight: 600; }
+
+  /* ── CRITICAL CALLOUT ─────────────────────────────────────────────── */
+  .critical {
+    background: white;
+    border: 1.5px solid var(--brown);
+    border-radius: 4px;
+    padding: 32px;
+    margin: 24px 0;
+    text-align: center;
+    position: relative;
+  }
+  .critical .label {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--brown);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .critical .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .critical .headline strong {
+    color: var(--brown);
+    font-weight: 600;
+  }
+  .critical p {
+    color: var(--ink-soft);
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  /* ── DECISION TREE ────────────────────────────────────────────────── */
+  .decision {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .decision-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .decision-row:last-child { border-bottom: none; }
+
+  .badge {
+    flex-shrink: 0;
+    width: 80px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+  .badge.path-a { background: var(--green); color: white; }
+  .badge.path-b { background: var(--gold); color: white; }
+  .badge.path-c { background: var(--rose); color: white; }
+  .badge.path-d { background: var(--brown); color: white; }
+
+  .decision-row p { margin: 0; flex: 1; }
+  .decision-row .who {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .decision-row a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+
+  /* ── TIMELINE ─────────────────────────────────────────────────────── */
+  .timeline {
+    margin: 32px 0;
+    position: relative;
+  }
+  .timeline-item {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-date {
+    flex-shrink: 0;
+    width: 160px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--brown);
+    line-height: 1.3;
+  }
+  .timeline-date small {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .timeline-content { flex: 1; }
+  .timeline-content strong { color: var(--brown-dark); font-weight: 600; }
+
+  /* ── STEPS ────────────────────────────────────────────────────────── */
+  .step {
+    display: flex;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid var(--brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--brown);
+    background: var(--cream);
+  }
+  .step-content { flex: 1; padding-top: 6px; }
+  .step-content h3 { margin-top: 0; margin-bottom: 8px; }
+  .step-content p:last-child { margin-bottom: 0; }
+
+  .field-list {
+    background: var(--cream-deep);
+    padding: 16px 22px;
+    border-radius: 3px;
+    margin: 12px 0;
+    list-style: none;
+  }
+  .field-list li {
+    padding: 5px 0 5px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .field-list li::before {
+    content: "·";
+    position: absolute;
+    left: 8px;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1;
+    top: 4px;
+  }
+
+  /* ── FACTS GRID ───────────────────────────────────────────────────── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 24px 0;
+  }
+  .fact {
+    background: white;
+    padding: 24px 18px;
+    text-align: center;
+  }
+  .fact .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    font-family: 'Lora', serif;
+  }
+  .fact .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--brown);
+    line-height: 1.1;
+  }
+  .fact .value small {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-family: 'Lora', serif;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* ── COST TABLE ───────────────────────────────────────────────────── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: white;
+    border: 1px solid var(--border);
+  }
+  .cost-table th {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    background: var(--cream-deep);
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .cost-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+  }
+  .cost-table tr:last-child td { border-bottom: none; }
+  .cost-table .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--brown);
+    font-size: 18px;
+    text-align: right;
+  }
+  .cost-table .total {
+    background: var(--cream-deep);
+    font-weight: 600;
+  }
+  .cost-table .total td { color: var(--brown-dark); }
+
+  /* ── CHILD SECTION ───────────────────────────────────────────────── */
+  .child-callout {
+    background: #f0f5ec;
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .child-callout h3 {
+    color: var(--green);
+    margin-top: 0;
+  }
+
+  /* ── WARNING ─────────────────────────────────────────────────────── */
+  .warning {
+    background: #fdf4f1;
+    border: 1px solid var(--rose);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .warning h3 {
+    color: var(--rose);
+    margin-top: 0;
+  }
+  .warning .domain {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--brown-dark);
+    border: 1px solid var(--border);
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────────────────── */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--brown-dark);
+    margin-bottom: 8px;
+  }
+
+  /* ── CLOSING ─────────────────────────────────────────────────────── */
+  .closing {
+    text-align: center;
+    padding: 80px 32px 100px;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--border);
+  }
+  .closing .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown);
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .closing h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .closing p {
+    max-width: 520px;
+    margin: 0 auto 12px;
+    color: var(--ink-soft);
+  }
+  .closing .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--brown);
+    margin-top: 32px;
+  }
+
+  a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+  }
+  a:hover { color: var(--brown-dark); }
+
+  /* ── PRINT ───────────────────────────────────────────────────────── */
+  @media print {
+    body { background: white; font-size: 12pt; }
+    section { padding: 24px 0; page-break-inside: avoid; }
+    .step, .timeline-item, .decision-row { page-break-inside: avoid; }
+    .hero { padding: 32px 0; }
+    a { color: var(--ink); }
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 60px 20px 48px; }
+    h2 { font-size: 30px; }
+    .step { gap: 16px; }
+    .step-num { width: 48px; height: 48px; font-size: 22px; }
+    .decision-row { flex-direction: column; gap: 8px; }
+    .badge { width: auto; align-self: flex-start; }
+    .timeline-item { flex-direction: column; gap: 6px; }
+    .timeline-date { width: auto; }
+    .cost-table { font-size: 14px; }
+    .cost-table th, .cost-table td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="ornament">SPARKS WEDDING · MAY 2028</div>
+  <h1>Your <em>Passport</em> Guide</h1>
+  <hr class="divider">
+  <p class="sub">For our American friends and family — everything you need to make sure your passport is ready in time. Most of you already have one. Some of you may need to renew. A few may be applying for the first time. We've got you covered.</p>
+</header>
+
+<div class="wrap">
+
+<!-- ─── I. THE VALIDITY RULE ───────────────────────────────────────── -->
+<section>
+  <h2><span class="num">I.</span>The most important rule</h2>
+  <p class="section-intro">Most US travellers get caught off guard by this single requirement.</p>
+
+  <p>To enter Portugal — and any country in the Schengen Area — your passport must meet two conditions:</p>
+
+  <div class="critical">
+    <div class="label">For Our Wedding</div>
+    <div class="headline">Your passport must be valid through at least <strong>November 2028</strong></div>
+    <p>and must have been issued sometime within the last 10 years.</p>
+  </div>
+
+  <p>The legal Schengen requirement is that your passport be valid for at least three months after you leave Europe. <strong>But many airlines enforce a stricter six-month rule using their own automated systems</strong> — meaning a passport with four months of validity might be accepted at the border but get you turned away at the gate before you ever board.</p>
+
+  <p>Don't gamble on it. If your passport expires any time in 2028, renew now. The fee is the same whether you renew in May 2027 or May 2028, and the new passport is good for ten more years.</p>
+
+  <p><strong>Pull out your passport right now and check the expiration date.</strong> It's printed on the photo page.</p>
+</section>
+
+<!-- ─── II. WHERE YOU STAND ────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">II.</span>Where you stand</h2>
+  <p class="section-intro">Find yourself in one of these four situations, then jump to that section.</p>
+
+  <div class="decision">
+    <div class="decision-row">
+      <span class="badge path-a">Path A</span>
+      <p>
+        <span class="who">My passport is valid through November 2028 or later.</span>
+        You are all set — nothing to do. Skim the rest of this guide if you'd like, but the work is already done. We'll see you in Portugal.
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-b">Path B</span>
+      <p>
+        <span class="who">I have a passport but it expires before November 2028.</span>
+        You need to renew. The good news: most adults can do this <strong>online or by mail</strong> without leaving home. <a href="#renewal">Skip to the renewal section.</a>
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-c">Path C</span>
+      <p>
+        <span class="who">I have never had a US passport.</span>
+        You'll apply in person at a post office or other acceptance facility. It's straightforward, just a few documents. <a href="#first-time">Skip to the first-time application section.</a>
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-d">Path D</span>
+      <p>
+        <span class="who">My child needs a passport.</span>
+        Children under 16 have their own process — both parents typically need to be present, and there's a separate form. <a href="#children">Skip to the children's section.</a>
+      </p>
+    </div>
+  </div>
+
+  <p>Most of you will fall into Path A and can put this guide aside. If you're not sure which path applies — for instance, if you can't find your passport, or if it's water-damaged or has missing pages — treat it as Path C and apply for a new one. Damaged passports cannot be renewed.</p>
+</section>
+
+<!-- ─── III. TIMELINE ──────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">III.</span>When to apply</h2>
+  <p class="section-intro">Processing can take eight to ten weeks door-to-door, longer at peak times.</p>
+
+  <p>The State Department's current processing times are 4-6 weeks for routine service and 2-3 weeks for expedited service. Add about two weeks for mailing in each direction, and the realistic door-to-door window is <strong>8-10 weeks routine, 6-7 weeks expedited</strong>. Spring and summer are peak season, so build in extra cushion.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Now – Sep 2027<small>The Easy Window</small></div>
+      <div class="timeline-content">
+        <p><strong>Apply now if you possibly can.</strong> Demand is lower in fall and early winter, processing is fastest, and you'll have your passport months before you need it. There's no benefit to waiting.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Oct – Dec 2027<small>Still Comfortable</small></div>
+      <div class="timeline-content">
+        <p>Routine service is fine. You'll have your passport in plenty of time to apply for ETIAS afterward and book flights with confidence.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Jan – Feb 2028<small>The Last Safe Moment</small></div>
+      <div class="timeline-content">
+        <p><strong>Pay for expedited service ($60 extra)</strong> — peak season has begun and routine times can stretch. Add the $22.05 for 1-3 day return shipping, too.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar – Apr 2028<small>Cutting It Close</small></div>
+      <div class="timeline-content">
+        <p>You'll likely need an in-person appointment at one of the 26 regional passport agencies, which require proof of travel within 14 days. Possible, but stressful. <em>Please don't let it get to this point.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── IV. RENEWAL ────────────────────────────────────────────────── -->
+<section id="renewal">
+  <h2><span class="num">IV.</span>Renewing your passport</h2>
+  <p class="section-intro">For most adults — the path of least resistance.</p>
+
+  <h3>Are you eligible to renew?</h3>
+  <p>You can renew (rather than reapply from scratch) if all of the following are true:</p>
+  <ul class="field-list">
+    <li>You have your most recent passport in hand</li>
+    <li>It is undamaged (no water damage, no missing or torn pages)</li>
+    <li>It was issued when you were <strong>16 or older</strong></li>
+    <li>It was issued within the last <strong>15 years</strong></li>
+    <li>It is in your current legal name (or you have your name-change paperwork)</li>
+  </ul>
+  <p>If any of those don't apply, you'll need to apply in person as a first-time applicant. <a href="#first-time">Skip to that section.</a></p>
+
+  <h3>Two ways to renew: online or by mail</h3>
+  <p>If you're eligible, the State Department now offers <strong>online renewal at <a href="https://travel.state.gov/content/travel/en/passports/have-passport/renew-online.html" target="_blank">travel.state.gov</a></strong>. The processing time is the same as mail (4-6 weeks routine), but you save the trouble of printing forms, finding stamps, and a trip to the post office.</p>
+
+  <p>If you prefer to renew by mail (or aren't eligible for online), you'll fill out <strong>Form DS-82</strong>, attach your old passport, a new passport photo, and a check, and mail it in.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Get a new passport photo</h3>
+      <p>Most CVS, Walgreens, FedEx, and post offices take passport photos for around $15-20. Specific requirements: 2×2 inches, plain white background, neutral expression, no glasses, taken within the last six months.</p>
+      <p>For online renewal, you'll upload a digital version of the photo — many post offices and pharmacies offer a digital file alongside the print for a small extra fee.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Fill out Form DS-82</h3>
+      <p>If renewing online, the website walks you through it. If by mail, use the form filler at <a href="https://travel.state.gov" target="_blank">travel.state.gov</a> and print on single-sided paper. <strong>Do not double-side print.</strong></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Pay the fee</h3>
+      <p>$130 for a passport book. Add $60 for expedited service. Add $22.05 for fast 1-3 day return shipping. Most people will want both add-ons if applying after January 2028.</p>
+      <p>For mail renewals: write a check or money order payable to <strong>"U.S. Department of State."</strong> Online renewals accept credit cards.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>Submit and wait</h3>
+      <p>Mail-in renewals go to the address printed on Form DS-82 (it varies by region). Use trackable shipping. Online renewals submit themselves — you'll mail your old passport separately when prompted.</p>
+      <p>Your old passport will be returned to you in a separate envelope a few weeks after your new one arrives, hole-punched and marked "void." Keep it as a souvenir — old passport stamps are wonderful keepsakes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── V. FIRST-TIME ──────────────────────────────────────────────── -->
+<section id="first-time">
+  <h2><span class="num">V.</span>Applying for the first time</h2>
+  <p class="section-intro">A bit more involved, but still very manageable. You'll need an in-person appointment.</p>
+
+  <p>First-time adult applicants and anyone who can't renew by mail must apply <strong>in person</strong> at an authorized passport acceptance facility. These are typically post offices, public libraries, or county clerk's offices — there are over 7,000 across the country. You'll find your nearest one at <a href="https://iafdb.travel.state.gov" target="_blank">iafdb.travel.state.gov</a>.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Gather your documents</h3>
+      <p>You'll need:</p>
+      <ul class="field-list">
+        <li><strong>Proof of US citizenship</strong> — a certified birth certificate (the one with the raised seal, not a photocopy) or a Certificate of Naturalization. <em>Digital or laminated birth certificates are not accepted.</em></li>
+        <li><strong>Photo ID</strong> — a valid driver's license or government ID</li>
+        <li><strong>Photocopy</strong> of the front and back of your photo ID, on plain white paper</li>
+        <li><strong>One passport photo</strong> (2×2 inches, white background)</li>
+        <li>Payment for fees (more on this below)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Fill out Form DS-11 — but don't sign it yet</h3>
+      <p>Use the online form filler at <a href="https://travel.state.gov" target="_blank">travel.state.gov</a> to complete Form DS-11, then print it on single-sided paper. <strong>Do not sign the form in advance.</strong> A passport agent must witness your signature in person at the appointment, and pre-signed forms have to be redone on the spot.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Make an appointment</h3>
+      <p>Most acceptance facilities require an appointment. Post offices use the USPS scheduler at <a href="https://tools.usps.com/rcas.htm" target="_blank">tools.usps.com/rcas.htm</a>. Some libraries and government offices use their own systems. Walk-ins are sometimes accepted but never guaranteed.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>Attend the appointment</h3>
+      <p>Bring all your documents and your unsigned form. The agent will verify your ID, watch you sign the form, take your oath, and seal everything in an envelope to mail to the State Department. The appointment usually takes 15-30 minutes.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <h3>Pay two separate fees</h3>
+      <p>This is the only step that confuses people. There are <strong>two</strong> fees:</p>
+      <ul class="field-list">
+        <li><strong>$130 application fee</strong> to the State Department — paid by check or money order made out to "U.S. Department of State"</li>
+        <li><strong>$35 acceptance fee</strong> to the facility — paid separately. Most post offices accept cards, others only checks. Confirm at booking.</li>
+      </ul>
+      <p>Add $60 for expedited service and $22.05 for 1-3 day return shipping if you want them.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-content">
+      <h3>Wait, and track</h3>
+      <p>Your birth certificate will be mailed back separately, two to four weeks after your new passport arrives. Track your application's status at <a href="https://travel.state.gov/content/travel/en/passports/after/status.html" target="_blank">travel.state.gov</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VI. CHILDREN ───────────────────────────────────────────────── -->
+<section id="children">
+  <h2><span class="num">VI.</span>Children under 16</h2>
+  <p class="section-intro">There's no shortcut here — every child needs to apply in person, every time.</p>
+
+  <p>Children's passports are <strong>only valid for five years</strong> (not ten like adults), and <strong>they cannot be renewed</strong>. Each time a child's passport expires, you submit a brand-new application from scratch. This is true whether your child is three or fifteen.</p>
+
+  <div class="child-callout">
+    <h3>Critical: both parents must consent</h3>
+    <p style="margin-bottom: 12px;">For any child under 16, the State Department requires both parents (or legal guardians) to authorize the passport. The simplest way is to <strong>have both parents present at the appointment</strong>, with the child.</p>
+    <p style="margin-bottom: 0;">If only one parent can attend, the absent parent must complete <strong>Form DS-3053</strong> (Statement of Consent), get it notarized, and the attending parent brings it along with a photocopy of the absent parent's ID. The notarized form must be dated within three months of the appointment.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Gather documents</h3>
+      <ul class="field-list">
+        <li><strong>The child's certified birth certificate</strong> — listing both parents' full names, with raised seal</li>
+        <li><strong>Both parents' photo IDs</strong> (driver's licenses or passports)</li>
+        <li><strong>Photocopies</strong> of both parents' IDs (front and back)</li>
+        <li><strong>One passport photo</strong> of the child (2×2, white background)</li>
+        <li><strong>Form DS-11</strong> — completed but unsigned</li>
+        <li><strong>Form DS-3053</strong>, notarized — only if one parent cannot attend</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>The passport photo for young children</h3>
+      <p>Photos of infants and toddlers are notoriously tricky — eyes must be open, mouth closed, no other people visible (no parent's hand holding their head). Most pharmacies have practice handling this, but it can take several attempts. Lay babies on a plain white sheet to photograph from above. Older children sit normally.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Bring the child to the appointment</h3>
+      <p>Yes — even infants must appear in person. The agent will verify the child against the photo and the birth certificate. The child does not need to "do" anything; they just need to be there.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>Pay the fees</h3>
+      <p>Children under 16 pay <strong>$100 to the State Department</strong> (not $130) plus the same <strong>$35 acceptance fee</strong>. Total: $135 per child. Expedited service and fast shipping cost the same as for adults.</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 24px;"><em>For families bringing the three-year-old and eight-year-old we know are coming: we strongly recommend applying by November 2027 at the latest. Children's passport photos are the most likely cause of delays, and you'll want time to redo them if needed.</em></p>
+</section>
+
+<!-- ─── VII. COSTS ─────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VII.</span>Costs at a glance</h2>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Application fee</th>
+        <th>Acceptance fee</th>
+        <th class="price">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adult renewal (online or mail)</td>
+        <td>$130</td>
+        <td>—</td>
+        <td class="price">$130</td>
+      </tr>
+      <tr>
+        <td>Adult first-time (in person)</td>
+        <td>$130</td>
+        <td>$35</td>
+        <td class="price">$165</td>
+      </tr>
+      <tr>
+        <td>Child under 16 (in person)</td>
+        <td>$100</td>
+        <td>$35</td>
+        <td class="price">$135</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Optional add-ons</h3>
+  <div class="facts">
+    <div class="fact">
+      <div class="label">Expedited</div>
+      <div class="value">+$60<small>2-3 weeks vs. 4-6</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Fast Return</div>
+      <div class="value">+$22<small>1-3 day delivery</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Photos</div>
+      <div class="value">~$15<small>at most pharmacies</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VIII. WATCH OUT ────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VIII.</span>A few things to watch for</h2>
+
+  <div class="warning">
+    <h3>Stick to the official site</h3>
+    <p>The only legitimate place to apply or renew is <span class="domain">travel.state.gov</span>. There are dozens of look-alike websites that charge $50-$150 in unnecessary "service fees" to fill out the form for you — often errors and all. The forms themselves are free, the State Department fees are fixed, and the process is genuinely manageable on your own.</p>
+      <p style="margin-bottom: 0;">If a search result looks like the State Department but the address doesn't end in <em>.gov</em>, close it.</p>
+  </div>
+
+  <p style="margin-top: 24px;">A few other tips that will save you headaches:</p>
+  <ul class="field-list">
+    <li><strong>Don't laminate</strong> your new passport when it arrives — it voids it.</li>
+    <li><strong>Don't sign Form DS-11</strong> in advance; it must be signed in front of the agent.</li>
+    <li><strong>Make photocopies</strong> of every document you submit, plus your new passport once you have it. Keep one set at home and one digitally accessible.</li>
+    <li><strong>Sign your new passport</strong> in ink as soon as it arrives — an unsigned passport is technically invalid.</li>
+    <li><strong>Once you have your passport, apply for ETIAS</strong> (the EU's new pre-travel authorisation). We've sent a separate guide for that.</li>
+  </ul>
+</section>
+
+<!-- ─── IX. FAQ ────────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">IX.</span>Common questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">My passport expires in October 2028. Do I really need to renew before the wedding?</div>
+    <p>Yes. By the time of the wedding in May 2028, you'd have only five months of validity remaining — under the airline's six-month rule. Renew now while it's easy.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I just bring my driver's license to Portugal?</div>
+    <p>No. A US driver's license is not a valid travel document for international flights. You absolutely need a passport book. (A passport <em>card</em> works only for land and sea entry from Canada, Mexico, and the Caribbean — not for Europe.)</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How long is my new passport valid?</div>
+    <p>Ten years for adults (issued at age 16 or older). Five years for children. The expiration date is printed on the photo page.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">My name has changed since my last passport. What do I do?</div>
+    <p>If the change happened within the last year, use Form DS-5504 (free correction). If it's been longer, use the regular renewal forms but include a certified copy of your marriage certificate, divorce decree, or court order documenting the name change.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">I lost my passport. Now what?</div>
+    <p>Report it lost via Form DS-64 at <a href="https://travel.state.gov" target="_blank">travel.state.gov</a> (or by phone), then apply for a replacement in person using Form DS-11 — you cannot renew by mail in this situation. Your old passport will be invalidated immediately, so don't report it lost until you're sure it's truly gone.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Should I get a passport card too?</div>
+    <p>Probably not, unless you cross into Canada or Mexico by land or sea regularly. Passport cards do not work for international flights — you'd be paying $30 extra for something you can't use to fly to Portugal.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">My child has my last name but my spouse and I have different last names. Will that cause issues?</div>
+    <p>No, as long as the birth certificate lists both parents' full legal names and both parents are present (or properly consenting via DS-3053). The agent doesn't care that your names differ — only that the documentation matches.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What if I run into trouble or have questions the agent can't answer?</div>
+    <p>The National Passport Information Center is open weekdays 8am-10pm Eastern, weekends 10am-3pm: <strong>1-877-487-2778</strong>. They're surprisingly helpful and patient.</p>
+  </div>
+</section>
+
+</div>
+
+<!-- ─── CLOSING ─────────────────────────────────────────────────────── -->
+<footer class="closing">
+  <div class="ornament">·  ·  ·</div>
+  <h2>We're here if you need us</h2>
+  <p>Genuinely — if any of this feels confusing, give us a call. We'd much rather walk you through it now than have you discover a problem at the airport.</p>
+  <p>You can always reach us at <a href="mailto:travel@sparkswedding.co">travel@sparkswedding.co</a>.</p>
+  <div class="signature">— Isabella &amp; Julie</div>
+</footer>
+
+</body>
+</html>

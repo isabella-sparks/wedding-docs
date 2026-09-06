@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Guide to ETIAS — Sparks Wedding 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown:        #8b5e3c;
+    --brown-dark:   #5e3f28;
+    --tan:          #d4a574;
+    --tan-soft:     #e8d5b7;
+    --cream:        #faf6f0;
+    --cream-deep:   #f3ebdd;
+    --ink:          #2c2620;
+    --ink-soft:     #5b5048;
+    --border:       #e0d3bf;
+    --green:        #6b8e5a;
+    --rose:         #b06a5b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 80px 32px 60px;
+    background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brown);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brown);
+  }
+  .hero .sub {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .divider {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--brown);
+    margin: 32px auto;
+    border: none;
+  }
+
+  /* ── SECTIONS ─────────────────────────────────────────────────────── */
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    font-style: italic;
+    color: var(--tan);
+    margin-right: 12px;
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--brown-dark);
+    margin: 28px 0 12px;
+  }
+  .section-intro {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 24px;
+    font-size: 17px;
+  }
+
+  p { margin-bottom: 16px; }
+  p strong { color: var(--brown-dark); font-weight: 600; }
+
+  /* ── DECISION TREE ────────────────────────────────────────────────── */
+  .decision {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    margin: 24px 0;
+  }
+  .decision-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .decision-row:last-child { border-bottom: none; }
+
+  .badge {
+    flex-shrink: 0;
+    width: 80px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+  .badge.yes  { background: var(--rose); color: white; }
+  .badge.no   { background: var(--green); color: white; }
+
+  .decision-row p { margin: 0; flex: 1; }
+  .decision-row .who {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  /* ── EXEMPT CALLOUT ──────────────────────────────────────────────── */
+  .exempt {
+    background: #f0f5ec;
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .exempt h3 {
+    color: var(--green);
+    margin-top: 0;
+  }
+  .exempt ul {
+    list-style: none;
+    padding: 0;
+  }
+  .exempt li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+  }
+  .exempt li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+  }
+
+  /* ── FACTS GRID ───────────────────────────────────────────────────── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 24px 0;
+  }
+  .fact {
+    background: white;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .fact .label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    font-family: 'Lora', serif;
+  }
+  .fact .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--brown);
+    line-height: 1.1;
+  }
+  .fact .value small {
+    display: block;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-family: 'Lora', serif;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* ── STEPS ────────────────────────────────────────────────────────── */
+  .step {
+    display: flex;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid var(--brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--brown);
+    background: var(--cream);
+  }
+  .step-content {
+    flex: 1;
+    padding-top: 6px;
+  }
+  .step-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .step-content p:last-child { margin-bottom: 0; }
+
+  .field-list {
+    background: var(--cream-deep);
+    padding: 16px 20px;
+    border-radius: 3px;
+    margin: 12px 0;
+    list-style: none;
+  }
+  .field-list li {
+    padding: 4px 0 4px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .field-list li::before {
+    content: "·";
+    position: absolute;
+    left: 8px;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1;
+    top: 4px;
+  }
+
+  /* ── WARNING ─────────────────────────────────────────────────────── */
+  .warning {
+    background: #fdf4f1;
+    border: 1px solid var(--rose);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .warning h3 {
+    color: var(--rose);
+    margin-top: 0;
+  }
+  .warning .domain {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--brown-dark);
+    border: 1px solid var(--border);
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────────────────── */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--brown-dark);
+    margin-bottom: 8px;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────────────────── */
+  .closing {
+    text-align: center;
+    padding: 80px 32px 100px;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--border);
+  }
+  .closing .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown);
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .closing h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .closing p {
+    max-width: 520px;
+    margin: 0 auto 12px;
+    color: var(--ink-soft);
+  }
+  .closing .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--brown);
+    margin-top: 32px;
+  }
+
+  a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+  }
+  a:hover { color: var(--brown-dark); }
+
+  /* ── PRINT ───────────────────────────────────────────────────────── */
+  @media print {
+    body { background: white; font-size: 12pt; }
+    section { padding: 24px 0; page-break-inside: avoid; }
+    .step, .decision-row { page-break-inside: avoid; }
+    .hero { padding: 32px 0; }
+    a { color: var(--ink); }
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 60px 20px 48px; }
+    h2 { font-size: 30px; }
+    .step { gap: 16px; }
+    .step-num { width: 48px; height: 48px; font-size: 22px; }
+    .decision-row { flex-direction: column; gap: 8px; }
+    .badge { width: auto; align-self: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="ornament">SPARKS WEDDING · MAY 2028</div>
+  <h1>Your Guide to <em>ETIAS</em></h1>
+  <hr class="divider">
+  <p class="sub">Everything you need to know about Europe's new travel authorisation — explained simply, so you can focus on the trip.</p>
+</header>
+
+<div class="wrap">
+
+<!-- ─── WHAT IS IT ──────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">I.</span>What is ETIAS?</h2>
+  <p class="section-intro">The short version, in plain English.</p>
+
+  <p>ETIAS stands for the <strong>European Travel Information and Authorisation System</strong>. It's a quick online form you fill out before flying to most of Europe — including Portugal, where the wedding is.</p>
+
+  <p>Think of it like the form Americans fill out before flying to Britain, or the ESTA that visitors to the United States complete. <strong>It is not a visa.</strong> It's just a security pre-check, done online in about 10 minutes, that gives airlines and border officers the green light to let you through.</p>
+
+  <p>Once you have it, you don't need to think about it again — it stays valid for <strong>three years</strong> (or until your passport expires, whichever comes first).</p>
+</section>
+
+<!-- ─── WHO NEEDS IT ────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">II.</span>Do you need to apply?</h2>
+  <p class="section-intro">It depends entirely on the passport you're travelling on.</p>
+
+  <div class="decision">
+    <div class="decision-row">
+      <span class="badge yes">Yes</span>
+      <p>
+        <span class="who">If you hold a passport from:</span>
+        The United States, United Kingdom, Canada, Australia, New Zealand, Japan, South Korea, Brazil, Mexico, Argentina, Israel, Singapore, or any of around 60 other visa-exempt countries — <strong>you need an ETIAS</strong> before flying to Portugal.
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge no">No</span>
+      <p>
+        <span class="who">If you hold a passport from any EU country:</span>
+        Ireland, France, Germany, Spain, Italy, Portugal itself, the Netherlands, etc. — <strong>you do not need ETIAS, ever.</strong> Your EU passport is your travel authorisation.
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge no">No</span>
+      <p>
+        <span class="who">If you already hold a Schengen visa or EU residence permit:</span>
+        You're already cleared to travel — <strong>ETIAS does not apply to you.</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="exempt">
+    <h3>You are completely exempt if any of these apply</h3>
+    <ul>
+      <li>You are a citizen of any EU country (the passport itself is your permission)</li>
+      <li>You are a citizen of Iceland, Liechtenstein, Norway, or Switzerland</li>
+      <li>You hold an EU long-stay national visa or residence permit</li>
+      <li>You hold a valid Schengen visa</li>
+      <li>You are a family member of an EU citizen and hold a residence card confirming that</li>
+    </ul>
+    <p style="margin-top: 12px; margin-bottom: 0;"><em>If you fall into any of these groups, the rest of this guide doesn't apply to you. Just bring your passport or residence document as you always have. We'll see you in Portugal.</em></p>
+  </div>
+
+  <p style="margin-top: 24px;"><strong>Dual citizens:</strong> see below for information on applying with both a US and an EU/UK passport.</p>
+  <p style="margin-top: 24px;"><strong>US Residents with dual citizenship:</strong> if you hold both a US passport and EU/UK passport, and currently live in the United States,<strong> you MUST enter and leave the United States on your U.S. passport. You are not allowed to enter on your foreign passport based on U.S. law.</strong></p>
+  <p style="margin-top: 24px;">THEREFORE: <strong>You must apply for ETIAS using your U.S. passport.</strong></p>
+
+</section>
+
+<!-- ─── THE BASICS ──────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">III.</span>The essentials at a glance</h2>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="label">Cost</div>
+      <div class="value">€20<small>free if you're under 18 or over 70</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Valid for</div>
+      <div class="value">3 years<small>or until passport expires</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Time to complete</div>
+      <div class="value">~10 min<small>most are approved instantly</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Apply by</div>
+      <div class="value">March 2028<small>at the latest, for our wedding</small></div>
+    </div>
+  </div>
+
+  <p style="margin-top: 24px;">We strongly recommend you apply at least <strong>two months before you fly</strong>. Most applications are approved within minutes, but a small number can take up to four days, and in rare cases up to thirty days if officials need extra information. There's no benefit to rushing it the week before — apply early and forget about it.</p>
+</section>
+
+<!-- ─── WHAT YOU NEED ────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">IV.</span>What to gather before you start</h2>
+  <p class="section-intro">Have these handy and the application takes ten minutes.</p>
+
+  <ul class="field-list">
+    <li>Your <strong>passport</strong> — must be valid for at least 3 months after you plan to leave Europe</li>
+    <li>A <strong>credit or debit card</strong> for the €20 fee</li>
+    <li>An <strong>email address</strong> (your approval comes here)</li>
+    <li>Your <strong>home address</strong></li>
+    <li>The address of <strong>where you'll stay in Portugal</strong> — for our wedding, that's <em>enter this address eventually</em>. We'll send you the full address closer to the date.</li>
+    <li>Your <strong>job title and employer</strong> (or "retired" / "homemaker" / "student" — whichever applies)</li>
+  </ul>
+
+  <p>That's it. No medical records, no financial statements, no proof of return ticket required for the application itself.</p>
+</section>
+
+<!-- ─── STEP BY STEP ────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">V.</span>Step by step</h2>
+  <p class="section-intro">Walk through the application from start to finish.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Go to the official website</h3>
+      <p>Open your web browser and type in this exact address:</p>
+      <p><a href="https://travel-europe.europa.eu/etias" target="_blank" style="font-family: 'Courier New', monospace; font-size: 16px;">travel-europe.europa.eu/etias</a></p>
+      <p>This is the only legitimate place to apply. <strong>Do not use any other site</strong> — more on that below.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Click "Apply for ETIAS"</h3>
+      <p>You'll find a clearly marked button on the home page. The site is available in English and many other languages — look for the language selector in the top right corner if you'd like to change it.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Enter your passport details</h3>
+      <p>Type the information exactly as it appears on the photo page of your passport — passport number, country of issue, dates of issue and expiry, full name, and date of birth. Double-check every character. A single typo can delay approval.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>Fill in your personal information</h3>
+      <p>Standard biographical details: address, phone number, email, occupation, level of education. There's nothing tricky here.</p>
+      <p>When asked about your trip, you'll enter Portugal as the country of first entry, and the venue address (which we'll provide) as where you'll stay.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <h3>Answer the background questions</h3>
+      <p>You'll be asked a short list of yes/no security questions — about criminal convictions, deportations from other countries, recent travel to conflict zones, and similar matters. For nearly everyone, the honest answer to all of these is "no."</p>
+      <p>Answer truthfully. The system cross-checks against several international databases, and dishonesty is the most common reason for refusal.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-content">
+      <h3>Pay the €20 fee</h3>
+      <p>Most credit and debit cards are accepted. The fee is non-refundable, even if your application is refused — though refusals are very rare for ordinary travellers.</p>
+      <p>If you're under 18 or over 70 on the day you apply, the fee is automatically waived. You still need to complete the application.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">7</div>
+    <div class="step-content">
+      <h3>Wait for your approval email</h3>
+      <p>Most people receive their approval within minutes. You'll get an email confirming the authorisation, which is electronically linked to your passport — there's no document to print, no sticker, nothing physical to carry.</p>
+      <p>If your application needs review, you may wait up to four days, and very occasionally up to thirty days. This is why we recommend applying early.</p>
+      <p><strong>Save the confirmation email.</strong> If anything goes wrong at the airport (very unlikely), it's helpful to be able to show it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AT THE AIRPORT ──────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VI.</span>At the airport</h2>
+
+  <p>This is the easy part. Your ETIAS is electronically linked to your passport — the airline checks it automatically when you check in, and the border officer in Lisbon sees it on their screen when you arrive.</p>
+
+  <p><strong>You don't need to print anything.</strong> You don't need to mention ETIAS at all. Just hand over your passport as you always have.</p>
+
+  <p>Note that you may also be asked to provide a fingerprint and have your photograph taken at the border — this is part of a separate but related system called the Entry/Exit System, which now applies to all non-EU visitors. It's quick and painless, much like the kiosks already in use in many airports.</p>
+</section>
+
+<!-- ─── WARNING ────────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VII.</span>A word of caution</h2>
+
+  <div class="warning">
+    <h3>Beware of look-alike websites</h3>
+    <p>Hundreds of unofficial websites have sprung up that look like the official ETIAS page. They charge €60, €80, even €100 — pocketing the difference and submitting your application to the real site for you. Some are outright scams that take your money and do nothing.</p>
+    <p style="margin-bottom: 0;"><strong>The official website is the only legitimate place to apply.</strong> The address ends in <span class="domain">europa.eu</span> — anything else is unofficial. The fee is always €20 (or free if you qualify), paid in euros, on the official site only.</p>
+  </div>
+
+  <p>If a search engine result looks like ETIAS but the address doesn't end in <em>europa.eu</em>, close it and try again. When in doubt, type the address by hand rather than clicking through advertisements.</p>
+</section>
+
+<!-- ─── FAQ ─────────────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VIII.</span>Common questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">When should I apply?</div>
+    <p>Any time from now through about March 2028 is fine. We'd suggest doing it well before booking flights, since in the very unlikely event of a refusal you'll want to know early. Truly no rush — just don't leave it to the last week.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">My passport expires before May 2028 — what should I do?</div>
+    <p>Renew your passport first, then apply for ETIAS using the new passport. Your ETIAS is tied to a specific passport, so applying with one that's about to expire wastes the fee.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Does each member of my family need their own ETIAS?</div>
+    <p>Yes — every traveller needs their own, including children. The fee is waived for anyone under 18 or over 70, but the application is still required. You can complete a child's application on their behalf using their own passport details.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What if I'm refused?</div>
+    <p>Refusals are uncommon and almost always relate to past serious criminal records, immigration violations, or incorrectly answered questions. If you are refused, the email will explain why and how to appeal. In most cases, refusals can be resolved.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I use the same ETIAS to travel elsewhere in Europe?</div>
+    <p>Yes — one ETIAS covers all 30 participating European countries for the full three years it's valid. So if you take advantage of being in Europe for the wedding to swing through Spain, France, or Italy as well, you're already covered.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What if I make a mistake on my application?</div>
+    <p>Small typos in your passport number cannot be corrected — you'll need to apply again and pay again. This is why we keep saying: double-check every character before submitting. Take your time.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">I'm an Irish, French, German (etc.) citizen — is there anything I need to do?</div>
+    <p>Nothing at all. EU citizens are completely exempt. Just bring your passport or national identity card as you always would.</p>
+  </div>
+</section>
+
+</div>
+
+<!-- ─── CLOSING ─────────────────────────────────────────────────────── -->
+<footer class="closing">
+  <div class="ornament">·  ·  ·</div>
+  <h2>If anything is unclear</h2>
+  <p>We are happy to walk you through this on the phone, in person, or by email. No question is too small. We want every one of you with us to celebrate, and we'll do everything we can to make the journey simple.</p>
+  <p>You can always reach us at <a href="mailto:travel@sparkswedding.co">travel@sparkswedding.co</a>.</p>
+  <div class="signature">— Isabella &amp; Jules</div>
+</footer>
+
+</body>
+</html>
