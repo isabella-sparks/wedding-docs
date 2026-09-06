@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Medical Coverage Guide — Sparks Wedding 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown:        #8b5e3c;
+    --brown-dark:   #5e3f28;
+    --tan:          #d4a574;
+    --tan-soft:     #e8d5b7;
+    --cream:        #faf6f0;
+    --cream-deep:   #f3ebdd;
+    --ink:          #2c2620;
+    --ink-soft:     #5b5048;
+    --border:       #e0d3bf;
+    --green:        #6b8e5a;
+    --rose:         #b06a5b;
+    --gold:         #b8924a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 80px 32px 60px;
+    background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brown);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brown);
+  }
+  .hero .sub {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .divider {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--brown);
+    margin: 32px auto;
+    border: none;
+  }
+
+  /* ── SECTIONS ─────────────────────────────────────────────────────── */
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    font-style: italic;
+    color: var(--tan);
+    margin-right: 12px;
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--brown-dark);
+    margin: 28px 0 12px;
+  }
+  .section-intro {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 24px;
+    font-size: 17px;
+  }
+
+  p { margin-bottom: 16px; }
+  p strong { color: var(--brown-dark); font-weight: 600; }
+
+  /* ── CRITICAL CALLOUT ─────────────────────────────────────────────── */
+  .critical {
+    background: white;
+    border: 1.5px solid var(--brown);
+    border-radius: 4px;
+    padding: 32px;
+    margin: 24px 0;
+    text-align: center;
+    position: relative;
+  }
+  .critical .label {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--brown);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .critical .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .critical .headline strong {
+    color: var(--brown);
+    font-weight: 600;
+  }
+  .critical p {
+    color: var(--ink-soft);
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  /* ── DECISION TREE ────────────────────────────────────────────────── */
+  .decision {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .decision-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .decision-row:last-child { border-bottom: none; }
+
+  .badge {
+    flex-shrink: 0;
+    width: 80px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+  .badge.path-a { background: var(--green); color: white; }
+  .badge.path-b { background: var(--gold); color: white; }
+  .badge.path-c { background: var(--rose); color: white; }
+  .badge.path-d { background: var(--brown); color: white; }
+
+  .decision-row p { margin: 0; flex: 1; }
+  .decision-row .who {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .decision-row a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+
+  /* ── TIMELINE ─────────────────────────────────────────────────────── */
+  .timeline {
+    margin: 32px 0;
+    position: relative;
+  }
+  .timeline-item {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-date {
+    flex-shrink: 0;
+    width: 180px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--brown);
+    line-height: 1.3;
+  }
+  .timeline-date small {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .timeline-content { flex: 1; }
+  .timeline-content strong { color: var(--brown-dark); font-weight: 600; }
+
+  /* ── STEPS ────────────────────────────────────────────────────────── */
+  .step {
+    display: flex;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid var(--brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--brown);
+    background: var(--cream);
+  }
+  .step-content { flex: 1; padding-top: 6px; }
+  .step-content h3 { margin-top: 0; margin-bottom: 8px; }
+  .step-content p:last-child { margin-bottom: 0; }
+
+  .field-list {
+    background: var(--cream-deep);
+    padding: 16px 22px;
+    border-radius: 3px;
+    margin: 12px 0;
+    list-style: none;
+  }
+  .field-list li {
+    padding: 5px 0 5px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .field-list li::before {
+    content: "·";
+    position: absolute;
+    left: 8px;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1;
+    top: 4px;
+  }
+
+  /* ── FACTS GRID ───────────────────────────────────────────────────── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 24px 0;
+  }
+  .fact {
+    background: white;
+    padding: 24px 18px;
+    text-align: center;
+  }
+  .fact .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    font-family: 'Lora', serif;
+  }
+  .fact .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--brown);
+    line-height: 1.1;
+  }
+  .fact .value small {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-family: 'Lora', serif;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* ── COST TABLE ───────────────────────────────────────────────────── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: white;
+    border: 1px solid var(--border);
+  }
+  .cost-table th {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    background: var(--cream-deep);
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .cost-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+    vertical-align: top;
+  }
+  .cost-table tr:last-child td { border-bottom: none; }
+  .cost-table .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--brown);
+    font-size: 18px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .cost-table .total {
+    background: var(--cream-deep);
+    font-weight: 600;
+  }
+  .cost-table .total td { color: var(--brown-dark); }
+
+  /* ── HIGHLIGHT CALLOUTS ──────────────────────────────────────────── */
+  .pick {
+    background: #f0f5ec;
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .pick h3 {
+    color: var(--green);
+    margin-top: 0;
+  }
+  .pick .tag {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--green);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* ── WARNING ─────────────────────────────────────────────────────── */
+  .warning {
+    background: #fdf4f1;
+    border: 1px solid var(--rose);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .warning h3 {
+    color: var(--rose);
+    margin-top: 0;
+  }
+  .warning .domain {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--brown-dark);
+    border: 1px solid var(--border);
+  }
+
+  /* ── PROVIDER BLOCK ──────────────────────────────────────────────── */
+  .provider {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .provider h3 {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  .provider .role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--tan);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .provider .why {
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────────────────── */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--brown-dark);
+    margin-bottom: 8px;
+  }
+
+  /* ── CLOSING ─────────────────────────────────────────────────────── */
+  .closing {
+    text-align: center;
+    padding: 80px 32px 100px;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--border);
+  }
+  .closing .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown);
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .closing h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .closing p {
+    max-width: 540px;
+    margin: 0 auto 12px;
+    color: var(--ink-soft);
+  }
+  .closing .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--brown);
+    margin-top: 32px;
+  }
+
+  a {
+    color: var(--brown);
+    text-decoration: underline;
+    text-decoration-color: var(--tan);
+    text-underline-offset: 3px;
+  }
+  a:hover { color: var(--brown-dark); }
+
+  /* ── PRINT ───────────────────────────────────────────────────────── */
+  @media print {
+    body { background: white; font-size: 12pt; }
+    section { padding: 24px 0; page-break-inside: avoid; }
+    .step, .timeline-item, .decision-row, .provider { page-break-inside: avoid; }
+    .hero { padding: 32px 0; }
+    a { color: var(--ink); }
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 60px 20px 48px; }
+    h2 { font-size: 30px; }
+    .step { gap: 16px; }
+    .step-num { width: 48px; height: 48px; font-size: 22px; }
+    .decision-row { flex-direction: column; gap: 8px; }
+    .badge { width: auto; align-self: flex-start; }
+    .timeline-item { flex-direction: column; gap: 6px; }
+    .timeline-date { width: auto; }
+    .cost-table { font-size: 14px; }
+    .cost-table th, .cost-table td { padding: 10px 12px; }
+    .critical .headline { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="ornament">SPARKS WEDDING · MAY 2028</div>
+  <h1>Your <em>Medical Coverage</em> Guide</h1>
+  <hr class="divider">
+  <p class="sub">For our American guests on Medicare — Medicare doesn't follow you to Portugal, but the right supplemental coverage will. Here's how to make sure you're protected for the trip.</p>
+</header>
+
+<div class="wrap">
+
+<!-- ─── I. THE MEDICARE PROBLEM ────────────────────────────────────── -->
+<section>
+  <h2><span class="num">I.</span>The most important fact</h2>
+  <p class="section-intro">Almost every American on Medicare gets caught off guard by this single rule.</p>
+
+  <p>Original Medicare — Parts A and B — does not pay for medical care you receive outside the United States. Not in Portugal, not anywhere in Europe. There are a few narrow exceptions involving emergencies near the Canadian or Mexican border, but none of them apply to the location of our wedding.</p>
+
+  <div class="critical">
+    <div class="label">For Our Wedding</div>
+    <div class="headline">If you have only Original Medicare, you have <strong>effectively no coverage</strong> in Portugal</div>
+    <p>Without supplemental insurance, every medical bill — from a routine doctor's visit to a hospital admission — would come out of your pocket.</p>
+  </div>
+
+  <p>Some Medicare Supplement (Medigap) plans include a small amount of foreign travel emergency coverage: an 80% reimbursement of billed charges, after a $250 annual deductible, with a $50,000 lifetime cap, and only for the first 60 days of any trip. This is the same six-letter set across all Medigap plans that include the benefit — Plans <strong>C, D, F, G, M, and N</strong>.</p>
+
+  <p>Helpful, but not enough on its own. A single hip fracture or cardiac event abroad can run through that lifetime cap in a few days, and once it's used, it's gone for the rest of your life — not refilled annually.</p>
+
+  <p>The good news: supplemental travel medical insurance is straightforward to buy, doesn't require medical exams in most cases, and is reasonably priced for the length of a wedding trip. We'll walk you through exactly what to do.</p>
+</section>
+
+<!-- ─── II. WHERE YOU STAND ────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">II.</span>Where you stand</h2>
+  <p class="section-intro">Find your current situation, then read what you need to do.</p>
+
+  <div class="decision">
+    <div class="decision-row">
+      <span class="badge path-a">Path A</span>
+      <p>
+        <span class="who">I have Original Medicare only — no Medigap, no Advantage plan.</span>
+        You have effectively no foreign coverage. You'll want to add all three layers we describe below: travel medical insurance, medical evacuation, and ideally trip cancellation. <a href="#layers">Skip to the three layers.</a>
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-b">Path B</span>
+      <p>
+        <span class="who">I have Original Medicare plus a Medigap (Supplement) policy.</span>
+        Your Medigap may include limited foreign emergency benefits — confirm which letter plan you have. If it's <strong>C, D, F, G, M, or N</strong>, you have $50,000 of lifetime emergency coverage to lean on. You'll still want supplemental travel medical insurance and medical evacuation on top of it.
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-c">Path C</span>
+      <p>
+        <span class="who">I have a Medicare Advantage plan.</span>
+        Coverage varies enormously by plan. A few Advantage plans include emergency travel benefits; most include almost nothing. Call the member services number on the back of your card, ask specifically about <strong>international medical coverage and medical evacuation</strong>, and write down what they tell you. Then layer on what's missing.
+      </p>
+    </div>
+    <div class="decision-row">
+      <span class="badge path-d">Path D</span>
+      <p>
+        <span class="who">I'm not sure what coverage I have.</span>
+        Spend fifteen minutes confirming this before anything else. Pull out your insurance cards, look at your most recent enrollment paperwork, or call <strong>1-800-MEDICARE</strong> (1-800-633-4227) and ask them to walk you through what you have. Once you know, you'll fall into Path A, B, or C above.
+      </p>
+    </div>
+  </div>
+
+  <p>Whatever path you're on, the supplemental coverage we recommend below will help. The differences are mostly about whether you already have a small foreign emergency benefit in place, or whether you have nothing at all.</p>
+</section>
+
+<!-- ─── III. THE THREE LAYERS ──────────────────────────────────────── -->
+<section id="layers">
+  <h2><span class="num">III.</span>The three layers of coverage</h2>
+  <p class="section-intro">What you actually need to buy — and why each one matters.</p>
+
+  <p>Travel insurance is sold under a lot of confusing names, but for a Medicare beneficiary heading to Europe, it really comes down to three distinct things. You can buy them as one comprehensive policy or as separate products. For older travelers with ongoing health considerations, buying them separately often gives you better coverage at a similar overall price.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Travel medical insurance</h3>
+      <p>This is the core product. It pays foreign doctors, clinics, and hospitals when you get sick or injured abroad — the equivalent of what Medicare would do at home. A good policy for our wedding trip will offer at least <strong>$250,000 in emergency medical coverage</strong>, and ideally $500,000.</p>
+      <p>Look for a policy that pays as <strong>primary coverage</strong>, meaning it pays the bill directly without first requiring you to file a claim against another insurer. With Medicare not applicable abroad, you don't want to be stuck in the middle of a coordination-of-benefits dispute while you're recovering in a Portuguese hospital.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Medical evacuation &amp; repatriation</h3>
+      <p>This pays the cost of moving you between facilities, and ultimately back home, when you can't fly commercial. Air ambulance flights from Europe to the United States can run from $50,000 to over $200,000. Your travel medical policy may include some evacuation benefits, but read the fine print closely — most policies will only pay to transport you to <strong>"the nearest acceptable facility,"</strong> which in practice means a hospital in Portugal, where you'd remain until you were stable enough to fly commercial.</p>
+      <p>If you want to be flown home to Tennessee for further treatment, you need either a travel insurance policy that explicitly covers transport to a "hospital of your choice," or a separate medical evacuation membership. We'll suggest specific options below.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Trip cancellation &amp; interruption</h3>
+      <p>This refunds your non-refundable trip costs (flights, hotels, tour deposits) if a covered reason — including a medical emergency before or during the trip — prevents you from going or forces you to come home early. It's the most optional of the three layers, but for a long-planned international trip with health considerations in the picture, most travelers find it well worth the modest extra premium.</p>
+      <p>If you do buy this, be sure to look for one with a <strong>pre-existing condition waiver</strong>, which we explain in detail in Section VI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── IV. RECOMMENDED PROVIDERS ──────────────────────────────────── -->
+<section>
+  <h2><span class="num">IV.</span>Specific plans worth considering</h2>
+  <p class="section-intro">A starting shortlist. Get quotes when the time comes — prices and details shift.</p>
+
+  <p>There are dozens of travel insurance companies, and for healthy 30-year-olds it doesn't matter much which you pick. For a Medicare beneficiary in his seventies, the differences become consequential. The companies below show up consistently in independent reviews from <em>U.S. News</em>, <em>Kiplinger</em>, <em>CNBC Select</em>, AARP, and the long-running <em>Rick Steves</em> traveler community — sources that don't take affiliate kickbacks for top placement.</p>
+
+  <div class="pick">
+    <div class="tag">Our top pick for Layer 1</div>
+    <h3>GeoBlue (now BCBS Global Solutions)</h3>
+    <p style="margin-bottom: 12px;">Of all the travel medical providers, this one is structurally the best fit for someone on Medicare. Their <strong>Single Trip Platinum</strong> plan (formerly called Voyager Choice) is available to travelers up to age 94, covers pre-existing medical conditions, and explicitly accepts Medicare Part A as the required "primary health plan." It's part of the BlueCross BlueShield family and works with international providers in over 190 countries.</p>
+    <p style="margin-bottom: 0;">It is a <strong>medical-only policy</strong> — it doesn't include trip cancellation or lost luggage. That's fine. We'd rather you have excellent medical coverage and buy trip cancellation separately, than have a single policy that's mediocre at both.</p>
+  </div>
+
+  <h3>Comprehensive plans (medical + cancellation in one)</h3>
+  <p>If you'd rather have everything bundled into a single policy, these four are the ones most consistently recommended for older travelers with pre-existing conditions. All offer pre-existing condition waivers if purchased within their qualifying windows, and all cover travelers well into their seventies and beyond. Get quotes from at least two before deciding.</p>
+
+  <div class="provider">
+    <h3>Seven Corners — Trip Protection Choice</h3>
+    <div class="role">Best All-Around for Seniors</div>
+    <p class="why">Named the top travel insurance for seniors by U.S. News in 2026.</p>
+    <p>Up to $500,000 in primary emergency medical coverage and a 20-day window after your initial trip deposit to qualify for the pre-existing condition waiver. Strong claims handling and 24/7 multilingual support.</p>
+  </div>
+
+  <div class="provider">
+    <h3>IMG — iTravelInsured Choice</h3>
+    <div class="role">Best for Higher Ages</div>
+    <p class="why">Among the few major plans that cover travelers up to age 99.</p>
+    <p>$100,000 in primary emergency medical, $500,000 in medical evacuation, and a 21-day pre-existing condition window — one of the more generous in the industry. Good middle option between bare-bones and luxury.</p>
+  </div>
+
+  <div class="provider">
+    <h3>Tin Leg — Gold</h3>
+    <div class="role">Highest Medical Limits</div>
+    <p class="why">Among the highest emergency medical limits available on the market.</p>
+    <p>$500,000 in primary emergency medical and $500,000 in medical evacuation. A pre-existing condition waiver is available with eligibility requirements. Often a strong value relative to the coverage limits.</p>
+  </div>
+
+  <div class="provider">
+    <h3>Allianz — Premier</h3>
+    <div class="role">Strongest Service Reputation</div>
+    <p class="why">No upper age limits, with consistently high claims and customer service ratings.</p>
+    <p>Full pre-existing condition waivers when purchased within 14 days of your initial trip deposit. Familiar global brand with extensive in-country assistance.</p>
+  </div>
+
+  <h3>For Layer 2: medical evacuation memberships</h3>
+  <p>These are not insurance policies — they're memberships. You pay an annual fee, and if you're hospitalized more than 150 miles from home, the company arranges and pays for transport to a hospital of your choice. The most-recommended is <strong>Medjet</strong>, used by experienced travelers for decades. Annual individual memberships start around $300, with multi-trip and short-trip options also available.</p>
+
+  <div class="warning">
+    <h3>An important note about Medjet at age 75+</h3>
+    <p style="margin-bottom: 0;">Medjet membership is open without medical questions for travelers <strong>under age 75</strong>. From 75 onward, you'll go through a short medical underwriting process — they'll ask about your conditions and may apply specific exclusions, but they do issue memberships to older travelers. Don't wait until the last month to apply, since the underwriting process takes time.</p>
+  </div>
+
+  <p>Alternatives in this category include <strong>Global Rescue</strong>, <strong>AirMed International</strong>, and <strong>Covac Global</strong>. They all do similar things; the differences are in the fine print about what counts as qualifying for transport, and which destinations they serve.</p>
+</section>
+
+<!-- ─── V. TIMELINE ────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">V.</span>When to set this up</h2>
+  <p class="section-intro">Most of this can't be done far in advance — but a few pieces can.</p>
+
+  <p>Travel medical insurance covers specific dates, so the actual policy is purchased in the months before the trip, not now. A few things, however, are worth setting up earlier.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Now – Mid 2027<small>Foundation</small></div>
+      <div class="timeline-content">
+        <p><strong>Confirm what your current Medicare coverage actually includes.</strong> Find your insurance cards, locate your most recent benefits booklet, and if anything is unclear, call your plan or 1-800-MEDICARE. Knowing exactly what you have makes every later step easier.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Late 2027<small>Optional Early Step</small></div>
+      <div class="timeline-content">
+        <p>If you want a Medjet (or similar) <strong>annual medical evacuation membership</strong>, set it up now — you'll be covered for every trip for a full year, including the wedding. The medical underwriting at age 75+ is easier when you're not under time pressure.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">When You Book Flights<small>Critical Moment</small></div>
+      <div class="timeline-content">
+        <p><strong>The day you make your first non-refundable trip payment, a clock starts ticking.</strong> Most travel insurance policies require you to purchase within <strong>14 to 21 days of that first deposit</strong> in order to qualify for pre-existing condition coverage. Section VI explains why this matters so much.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">30–60 Days Before<small>Final Setup</small></div>
+      <div class="timeline-content">
+        <p>If you didn't buy a policy when you booked, this is the latest sensible window. Confirm your policy documents, refill prescriptions to cover the trip plus a buffer, and ask your doctor for a written summary of your conditions and medications to bring with you.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Two Weeks Before<small>Departure Prep</small></div>
+      <div class="timeline-content">
+        <p>Print your policy documents, write down the insurer's 24-hour emergency phone number on paper, save it to your phone, and share a copy of everything with a trusted family member back home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VI. PRE-EXISTING CONDITIONS ────────────────────────────────── -->
+<section>
+  <h2><span class="num">VI.</span>Pre-existing conditions, explained</h2>
+  <p class="section-intro">The single most important detail in this whole guide.</p>
+
+  <p>Most travel insurance policies exclude any medical issue related to a "pre-existing condition" by default — defined as anything you were diagnosed with, treated for, or took medication for during a "look-back period" before buying the policy. Look-back periods are usually <strong>60 to 180 days</strong>. For someone with ongoing health considerations, this exclusion would gut the value of the policy.</p>
+
+  <p>The fix is called a <strong>pre-existing condition waiver</strong>. Most reputable insurers offer one, but only if you meet certain requirements. The most important one is timing.</p>
+
+  <div class="critical">
+    <div class="label">The Window</div>
+    <div class="headline">You must purchase your policy within <strong>14 to 21 days</strong> of your first non-refundable trip payment</div>
+    <p>"First payment" means flight tickets, hotel deposits, tour bookings — anything you've put money down for. The exact window varies by insurer.</p>
+  </div>
+
+  <p>The other typical requirements for a waiver:</p>
+  <ul class="field-list">
+    <li>You must insure the <strong>full non-refundable cost</strong> of your trip (don't lowball this number to save on premium)</li>
+    <li>You must be <strong>medically stable</strong> on the date you buy the policy — not in a recent hospitalization, not awaiting test results that could change your treatment</li>
+    <li>You must be <strong>medically able to travel</strong> on the date the coverage starts</li>
+  </ul>
+
+  <p>None of this requires a medical exam. You don't submit records when you buy the policy. The insurer simply takes you at your word — and only digs into your medical history if you actually file a claim.</p>
+
+  <p>If you miss the window, most policies will still cover medical emergencies that have nothing to do with your pre-existing conditions. But for a 76-year-old, almost any emergency could plausibly be linked to an existing condition (a heart issue, a fall related to a medication, etc.), so the waiver matters a great deal. <strong>Don't miss the window.</strong></p>
+</section>
+
+<!-- ─── VII. COSTS ─────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VII.</span>What this will cost</h2>
+  <p class="section-intro">Rough budgeting estimates — actual quotes vary by age, plan, and trip details.</p>
+
+  <p>Travel medical insurance for someone in his mid-seventies will cost meaningfully more than for a younger traveler. Plan for this as part of the trip budget. The numbers below are estimates for a roughly two-week trip; please get actual quotes when the time comes.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Type</th>
+        <th class="price">Estimated Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Travel medical only</td>
+        <td>GeoBlue Single Trip Platinum or similar, two-week trip</td>
+        <td class="price">$200–$450</td>
+      </tr>
+      <tr>
+        <td>Comprehensive plan</td>
+        <td>Medical + cancellation, ~7% of insured trip cost</td>
+        <td class="price">$400–$900</td>
+      </tr>
+      <tr>
+        <td>Medical evacuation</td>
+        <td>Medjet short-trip (8-30 days) or annual membership</td>
+        <td class="price">$100–$350</td>
+      </tr>
+      <tr class="total">
+        <td colspan="2">Typical total for a two-week trip</td>
+        <td class="price">$500–$1,200</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>What drives the price</h3>
+  <div class="facts">
+    <div class="fact">
+      <div class="label">Age</div>
+      <div class="value">×2–3<small>vs. younger traveler</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Trip Cost</div>
+      <div class="value">~7%<small>typical premium ratio</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Coverage Limit</div>
+      <div class="value">±20%<small>$250K vs $500K</small></div>
+    </div>
+    <div class="fact">
+      <div class="label">Conditions</div>
+      <div class="value">±15%<small>w/ pre-existing waiver</small></div>
+    </div>
+  </div>
+
+  <p>For comparison: an air ambulance flight from Portugal to the United States can cost $80,000 to $200,000 out of pocket, and a one-week stay in a European hospital with surgery can run $30,000 to $60,000. Travel medical insurance is one of the few areas of insurance where the math is genuinely lopsided in the buyer's favor for older travelers.</p>
+</section>
+
+<!-- ─── VIII. WATCH OUT ────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">VIII.</span>A few things to watch for</h2>
+
+  <div class="warning">
+    <h3>Be careful with "best of" review sites</h3>
+    <p>Many of the websites that come up first in a search for "best travel insurance for seniors" are paid affiliate marketing — they're ranked by which company pays them the most per signup, not by which is best. The reviews we relied on for this guide all disclose their methodology and most don't take affiliate commissions: <em>U.S. News</em>, <em>CNBC Select</em>, <em>Kiplinger</em>, <em>MoneyGeek</em>, AARP, and the established traveler communities like the <em>Rick Steves</em> forum.</p>
+    <p style="margin-bottom: 0;">If you want to comparison-shop yourself, the two reputable aggregator marketplaces are <span class="domain">squaremouth.com</span> and <span class="domain">insuremytrip.com</span>. Both let you filter by age, pre-existing conditions, and medical limits, and both display the actual policy documents.</p>
+  </div>
+
+  <p style="margin-top: 24px;">A few more details that often trip people up:</p>
+  <ul class="field-list">
+    <li><strong>Watch the age caps.</strong> Many policies cap eligibility at 75, 80, or 85. If a quote engine doesn't ask your date of birth, the answer it gives you may not actually apply.</li>
+    <li><strong>Primary vs. secondary coverage.</strong> Primary policies pay first, without coordinating with another insurer. Secondary policies require you to file with another insurer first — which is meaningless when Medicare doesn't apply abroad. Prefer primary.</li>
+    <li><strong>Direct billing networks.</strong> GeoBlue and a few others have networks where the insurer pays the foreign provider directly — you don't pay out of pocket and seek reimbursement. This matters more for large bills than small ones.</li>
+    <li><strong>"Acute onset" vs. full pre-existing condition coverage.</strong> Some cheap plans only cover sudden, unexpected flare-ups of pre-existing conditions, not ongoing care for them. Read the policy language.</li>
+    <li><strong>Prescription medications.</strong> Medicare Part D doesn't pay for prescriptions filled abroad. Bring enough supply for the whole trip plus a buffer of several days. Travel with the original labeled bottles, and bring a written list of your medications and dosages.</li>
+    <li><strong>Bring a one-page health summary.</strong> Ask your doctor for a brief written summary of your conditions, medications, and allergies, and carry it with you. If something happens, this saves enormous time for the foreign medical staff.</li>
+  </ul>
+</section>
+
+<!-- ─── IX. FAQ ────────────────────────────────────────────────────── -->
+<section>
+  <h2><span class="num">IX.</span>Common questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I really need all three layers?</div>
+    <p>For our trip, yes — at minimum, layers 1 and 2 (travel medical and medical evacuation). Skipping medical evacuation is the single most common mistake older travelers make, because the cost of an air ambulance back to the US is the kind of expense that can compromise a person's life savings. Layer 3 (trip cancellation) is more genuinely optional, depending on how much of the trip is non-refundable.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Won't my Medigap policy be enough?</div>
+    <p>Probably not. Medigap plans C, D, F, G, M, and N all share the same foreign emergency benefit: 80% reimbursement after a $250 deductible, with a $50,000 lifetime cap. That cap covers a single moderate hospital stay — not an air ambulance home, not a major surgery, and not anything if you've used the cap on a prior trip. Treat Medigap as a helpful supplement, not as your primary coverage abroad.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">My Medicare Advantage plan says it has "worldwide emergency coverage." Is that enough?</div>
+    <p>Read the policy carefully — those benefits are usually small (often $25,000 or $50,000 per trip), reimbursement-only, and don't cover medical evacuation. Even if it sounds reassuring on the brochure, you still want a layered supplemental policy.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I just pay out of pocket if something happens?</div>
+    <p>Foreign hospitals routinely require deposits or pre-payment for non-residents, and the bills add up faster than most Americans expect. A multi-day stay with imaging, medication, and surgery can easily reach $40,000–$80,000 in Western Europe — less than the US, but still life-altering for most retirees. Insurance turns a catastrophic risk into a known, modest cost.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What happens if I get sick before the trip and can't go?</div>
+    <p>This is exactly what trip cancellation insurance is for. With a pre-existing condition waiver in place and a covered medical reason, you'd get back the non-refundable portion of your trip costs. Without insurance, you'd lose those deposits.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What do I do if I have a medical emergency in Portugal?</div>
+    <p>Call <strong>112</strong> — the EU-wide emergency number, equivalent to 911. Then, as soon as you're stable, call your travel insurance company's 24-hour assistance line (it'll be on your policy documents and on a card we recommend you keep in your wallet). They'll coordinate with the hospital, arrange direct billing where possible, and handle logistics. Don't wait to call them.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is healthcare in Portugal any good?</div>
+    <p>Yes — quite good, in fact. Portugal has both a strong public system and excellent private hospitals, particularly in Lisbon. English is widely spoken among medical professionals, especially at private hospitals. The concern isn't quality of care; it's making sure you're covered for what it costs.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I buy a policy after I'm already in Portugal?</div>
+    <p>Generally, no. Travel medical policies must be purchased before you leave the country, and a few even require purchase before you book the trip. This is one more reason not to procrastinate.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What if I need to bring a CPAP, oxygen, or other medical equipment?</div>
+    <p>Most airlines accommodate medical equipment with advance notice — call the airline at least two weeks before the flight. Bring a doctor's letter listing the equipment and your need for it. For oxygen specifically, you'll need a portable oxygen concentrator approved for in-flight use; airlines won't allow tanks in the cabin.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Where do I actually start?</div>
+    <p>Right now: confirm your current Medicare coverage and write down what it includes. In late 2027: get a Medjet membership if you want one. When you book flights and hotels: buy your travel medical and (optionally) trip cancellation policy within 14–21 days. That's the whole sequence.</p>
+  </div>
+</section>
+
+</div>
+
+<!-- ─── CLOSING ─────────────────────────────────────────────────────── -->
+<footer class="closing">
+  <div class="ornament">·  ·  ·</div>
+  <h2>We want you there with us</h2>
+  <p>This is a lot of detail, but the underlying decision is simpler than it looks: a few hundred dollars of supplemental coverage, set up at the right moment, makes the difference between a wedding trip and a financial worry.</p>
+  <p>If any of this feels confusing, please call us. We'd much rather walk through it together over the phone than have you puzzle over it alone — and we're happy to help compare quotes or read fine print when the time comes.</p>
+  <p>You can reach us anytime at <a href="mailto:travel@sparkswedding.co">travel@sparkswedding.co</a>.</p>
+  <div class="signature">— Isabella &amp; Julie</div>
+</footer>
+
+</body>
+</html>
